@@ -1,0 +1,113 @@
+/* Estilos específicos para a página "Cursos" */
+
+.hero-page {
+    padding: 10rem 0 5rem;
+    background: linear-gradient(180deg, var(--black) 0%, var(--gray-dark) 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-page::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 30% 70%, rgba(50, 50, 50, 0.2) 0%, transparent 50%);
+}
+
+.hero-page-content {
+    max-width: 800px;
+    text-align: center;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.hero-page-title {
+    margin-bottom: 1.5rem;
+    font-size: 3rem;
+}
+
+.hero-page-subtitle {
+    font-size: 1.2rem;
+    color: var(--gray-text);
+}
+
+.main-content {
+    padding: 4rem 0 6rem;
+}
+
+.courses-section {
+    margin-bottom: 4rem;
+}
+
+/* Lista de Cursos */
+.courses-list {
+    max-width: 800px;
+    margin: 3rem auto 0;
+}
+
+.course-item {
+    background-color: var(--gray-dark);
+    border-radius: 12px;
+    padding: 3rem;
+    border: 1px solid var(--gray-border);
+    margin-bottom: 2.5rem;
+    transition: all 0.3s ease;
+}
+
+.course-item:hover {
+    border-color: var(--gray-text);
+    transform: translateY(-5px);
+}
+
+.course-title {
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    color: var(--white);
+}
+
+.course-description {
+    color: var(--gray-text);
+    margin-bottom: 2rem;
+    line-height: 1.7;
+    font-size: 1.1rem;
+}
+
+/* Seção de Novos Cursos */
+.coming-soon-section {
+    background-color: var(--gray-dark);
+    border-radius: 12px;
+    padding: 2.5rem;
+    border: 1px dashed var(--gray-border);
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.coming-soon-section h3 {
+    margin-bottom: 1rem;
+    color: var(--white);
+}
+
+.coming-soon-section p {
+    color: var(--gray-text);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .hero-page-title {
+        font-size: 2.3rem;
+    }
+    
+    .course-item {
+        padding: 2rem;
+    }
+    
+    .course-title {
+        font-size: 1.7rem;
+    }
+}
