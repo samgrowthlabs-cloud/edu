@@ -1,0 +1,208 @@
+/* Estilos específicos para a página de Solicitação */
+
+.page-title {
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    background: linear-gradient(to right, #ffffff, #a0a0a0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.page-subtitle {
+    text-align: center;
+    color: var(--color-text-light);
+    font-size: 1.3rem;
+    margin-bottom: 3rem;
+}
+
+/* Formulário */
+.form-section {
+    padding: 4rem 0;
+    border-top: 1px solid var(--color-border);
+}
+
+.form-container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.request-form {
+    background-color: var(--color-secondary);
+    padding: 2.5rem;
+    border-radius: var(--border-radius);
+    border: 1px solid var(--color-border);
+    margin-bottom: 2rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: #ffffff;
+}
+
+.form-group input[type="text"],
+.form-group input[type="tel"] {
+    width: 100%;
+    padding: 1rem;
+    background-color: rgba(0, 0, 0, 0.3);
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius);
+    color: var(--color-text);
+    font-size: 1rem;
+    transition: border-color var(--transition-speed) ease;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: var(--color-accent);
+}
+
+/* Checkbox */
+.checkbox-group {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.8rem;
+}
+
+.checkbox-group input[type="checkbox"] {
+    margin-top: 0.3rem;
+    cursor: pointer;
+}
+
+.checkbox-group label {
+    margin-bottom: 0;
+    font-weight: normal;
+    line-height: 1.5;
+}
+
+.checkbox-group a {
+    color: var(--color-text);
+    text-decoration: underline;
+}
+
+.checkbox-group a:hover {
+    color: #ffffff;
+}
+
+/* Botão de envio */
+.submit-btn {
+    width: 100%;
+    padding: 1.2rem;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+}
+
+.submit-btn i {
+    font-size: 1.2rem;
+}
+
+/* Informações do formulário */
+.form-info {
+    background-color: rgba(46, 125, 50, 0.1);
+    padding: 1rem;
+    border-radius: var(--border-radius);
+    border: 1px solid var(--color-success);
+    margin-top: 1.5rem;
+}
+
+.form-info p {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    margin-bottom: 0;
+    color: var(--color-text-light);
+    font-size: 0.95rem;
+}
+
+.form-info i {
+    color: var(--color-success);
+}
+
+/* Avisos */
+.form-disclaimer {
+    background-color: rgba(249, 168, 37, 0.1);
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+    border: 1px solid var(--color-warning);
+}
+
+.form-disclaimer h3 {
+    color: #ffffff;
+    margin-bottom: 1rem;
+}
+
+.form-disclaimer ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.form-disclaimer li {
+    margin-bottom: 0.8rem;
+    color: var(--color-text-light);
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.form-disclaimer li:before {
+    content: "•";
+    color: var(--color-warning);
+    position: absolute;
+    left: 0;
+}
+
+/* Mensagens de erro */
+.error-message {
+    color: #ff6b6b;
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+    min-height: 1.2rem;
+}
+
+/* Estados do formulário */
+.form-group input.error {
+    border-color: #ff6b6b;
+}
+
+.form-group input.success {
+    border-color: var(--color-success);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .page-title {
+        font-size: 2.5rem;
+    }
+    
+    .page-subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .request-form {
+        padding: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .page-title {
+        font-size: 2rem;
+    }
+    
+    .request-form {
+        padding: 1.5rem;
+    }
+    
+    .checkbox-group {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}

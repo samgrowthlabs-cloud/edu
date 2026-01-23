@@ -1,231 +1,224 @@
-/* Estilos específicos para a página "Como Funciona" */
+/* Estilos específicos para a página Como Funciona */
 
-.hero-page {
-    padding: 10rem 0 5rem;
-    background: linear-gradient(180deg, var(--black) 0%, var(--gray-dark) 100%);
-    position: relative;
-    overflow: hidden;
-}
-
-.hero-page::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: radial-gradient(circle at 70% 30%, rgba(50, 50, 50, 0.2) 0%, transparent 50%);
-}
-
-.hero-page-content {
-    max-width: 800px;
-    text-align: center;
-    margin: 0 auto;
-    position: relative;
-    z-index: 1;
-}
-
-.hero-page-title {
-    margin-bottom: 1.5rem;
+.page-title {
     font-size: 3rem;
-}
-
-.hero-page-subtitle {
-    font-size: 1.2rem;
-    color: var(--gray-text);
-}
-
-.main-content {
-    padding: 4rem 0;
-}
-
-.content-section {
-    margin-bottom: 6rem;
-}
-
-.how-it-works-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-    margin-top: 3rem;
-}
-
-.how-it-works-card {
-    background-color: var(--gray-dark);
-    padding: 2.5rem 2rem;
-    border-radius: 8px;
-    border: 1px solid var(--gray-border);
-    transition: all 0.3s ease;
-    position: relative;
-    overflow: hidden;
-}
-
-.how-it-works-card:hover {
-    transform: translateY(-5px);
-    border-color: var(--gray-text);
-}
-
-.how-it-works-number {
-    position: absolute;
-    top: 1rem;
-    right: 1.5rem;
-    font-size: 4rem;
-    font-weight: 700;
-    font-family: 'Montserrat', sans-serif;
-    color: rgba(255, 255, 255, 0.05);
-    line-height: 1;
-}
-
-.how-it-works-card h3 {
-    margin-top: 1rem;
+    text-align: center;
     margin-bottom: 1rem;
-    position: relative;
-    z-index: 1;
+    background: linear-gradient(to right, #ffffff, #a0a0a0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
-.how-it-works-card p {
-    position: relative;
-    z-index: 1;
+.page-subtitle {
+    text-align: center;
+    color: var(--color-text-light);
+    font-size: 1.3rem;
+    margin-bottom: 3rem;
 }
 
-/* Estrutura do Curso */
-.course-structure {
-    margin-top: 3rem;
+/* Metodologia */
+.methodology-section {
+    padding: 4rem 0;
+    border-top: 1px solid var(--color-border);
 }
 
-.structure-item {
+.methodology-intro {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 4rem;
+}
+
+.methodology-intro h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.methodology-intro p {
+    font-size: 1.2rem;
+    color: var(--color-text-light);
+}
+
+/* Passos */
+.steps-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.step-card {
     display: flex;
+    gap: 2rem;
     align-items: flex-start;
-    margin-bottom: 2.5rem;
-    padding-bottom: 2.5rem;
-    border-bottom: 1px solid var(--gray-border);
+    background-color: var(--color-secondary);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    margin-bottom: 1.5rem;
+    border: 1px solid var(--color-border);
+    transition: transform var(--transition-speed) ease;
 }
 
-.structure-item:last-child {
-    border-bottom: none;
-    margin-bottom: 0;
-    padding-bottom: 0;
+.step-card:hover {
+    transform: translateX(10px);
 }
 
-.structure-icon {
-    flex-shrink: 0;
-    width: 60px;
-    height: 60px;
-    background: var(--gradient);
+.step-number {
+    background-color: var(--color-accent);
+    color: #ffffff;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-right: 2rem;
-    color: var(--black);
     font-size: 1.5rem;
+    font-weight: 700;
+    flex-shrink: 0;
 }
 
-.structure-content {
-    flex: 1;
-}
-
-.structure-content h3 {
+.step-content h3 {
+    color: #ffffff;
     margin-bottom: 0.8rem;
 }
 
-/* Acesso e Suporte */
-.access-support {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 3rem;
-    margin-top: 3rem;
+.step-content p {
+    color: var(--color-text-light);
+    margin-bottom: 0;
 }
 
-.access-card {
-    background-color: var(--gray-dark);
-    padding: 2.5rem;
-    border-radius: 8px;
-    border: 1px solid var(--gray-border);
-}
-
-.access-card h3 {
-    margin-bottom: 1.2rem;
-    position: relative;
-    padding-bottom: 0.8rem;
-}
-
-.access-card h3::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 50px;
-    height: 2px;
-    background: var(--gradient);
-}
-
-.access-card ul {
-    margin-top: 1.5rem;
-    padding-left: 1.5rem;
-}
-
-.access-card li {
-    margin-bottom: 0.8rem;
-    color: var(--gray-text);
-    position: relative;
-}
-
-.access-card li::before {
-    content: '•';
-    color: var(--white);
-    font-weight: bold;
-    position: absolute;
-    left: -1.2rem;
-}
-
-/* CTA Section */
-.cta-section {
-    text-align: center;
+/* Diferenciais */
+.differentiators-section {
     padding: 4rem 0;
-    background-color: var(--gray-dark);
-    border-radius: 12px;
-    margin-top: 4rem;
+    border-top: 1px solid var(--color-border);
 }
 
-.cta-section .cta-content {
-    max-width: 700px;
-    margin: 0 auto;
+.differentiators-section h2 {
+    text-align: center;
+    margin-bottom: 3rem;
 }
 
-.cta-section .cta-title {
+.differentiators-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.differentiator-card {
+    background-color: var(--color-secondary);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    border: 1px solid var(--color-border);
+    text-align: center;
+    transition: transform var(--transition-speed) ease;
+}
+
+.differentiator-card:hover {
+    transform: translateY(-8px);
+}
+
+.differentiator-icon {
+    font-size: 2.5rem;
+    color: #ffffff;
+    margin-bottom: 1.5rem;
+}
+
+.differentiator-card h3 {
     margin-bottom: 1rem;
 }
 
-.cta-section .cta-text {
-    margin-bottom: 2.5rem;
-    font-size: 1.2rem;
+.differentiator-card p {
+    color: var(--color-text-light);
+    margin-bottom: 0;
+}
+
+/* Aviso */
+.warning-section {
+    padding: 4rem 0;
+    border-top: 1px solid var(--color-border);
+}
+
+.warning-content {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    background-color: rgba(249, 168, 37, 0.1);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    border: 2px solid var(--color-warning);
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.warning-icon {
+    font-size: 3rem;
+    color: var(--color-warning);
+    flex-shrink: 0;
+}
+
+.warning-text h3 {
+    color: #ffffff;
+    margin-bottom: 1rem;
+}
+
+.warning-text p {
+    color: var(--color-text-light);
+    margin-bottom: 0;
+}
+
+/* Call to Action */
+.cta-section {
+    padding: 4rem 0;
+    text-align: center;
+    border-top: 1px solid var(--color-border);
+}
+
+.cta-section h2 {
+    margin-bottom: 1rem;
+}
+
+.cta-section p {
+    color: var(--color-text-light);
+    margin-bottom: 2rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* Responsividade */
 @media (max-width: 768px) {
-    .hero-page-title {
-        font-size: 2.3rem;
+    .page-title {
+        font-size: 2.5rem;
     }
     
-    .how-it-works-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .structure-item {
+    .step-card {
         flex-direction: column;
+        text-align: center;
+        gap: 1rem;
     }
     
-    .structure-icon {
-        margin-right: 0;
-        margin-bottom: 1.5rem;
+    .step-number {
+        margin: 0 auto;
     }
     
-    .access-support {
+    .warning-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .differentiators-grid {
         grid-template-columns: 1fr;
     }
+}
+
+@media (max-width: 480px) {
+    .page-title {
+        font-size: 2rem;
+    }
     
-    .access-card {
-        padding: 2rem;
+    .page-subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .methodology-intro h2 {
+        font-size: 2rem;
     }
 }

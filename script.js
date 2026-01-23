@@ -1,96 +1,139 @@
-// Script principal do site
-
-document.addEventListener('DOMContentLoaded', function() {
-    // Menu mobile
-    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-    const navMenu = document.querySelector('.nav-menu');
+// Função principal auto-executável para evitar conflitos
+(function() {
+    'use strict';
     
-    if (mobileMenuBtn) {
-        mobileMenuBtn.addEventListener('click', function() {
-            navMenu.classList.toggle('active');
-            const icon = this.querySelector('i');
-            if (icon.classList.contains('fa-bars')) {
-                icon.classList.remove('fa-bars');
-                icon.classList.add('fa-times');
-            } else {
-                icon.classList.remove('fa-times');
-                icon.classList.add('fa-bars');
-            }
-        });
-    }
-    
-    // Fechar menu ao clicar em um link
-    const navLinks = document.querySelectorAll('.nav-link');
-    navLinks.forEach(link => {
-        link.addEventListener('click', function() {
-            if (navMenu.classList.contains('active')) {
-                navMenu.classList.remove('active');
-                const icon = mobileMenuBtn.querySelector('i');
-                icon.classList.remove('fa-times');
-                icon.classList.add('fa-bars');
-            }
-        });
-    });
-    
-    // Atualizar ano no rodapé
-    const currentYearSpan = document.getElementById('currentYear');
-    if (currentYearSpan) {
-        currentYearSpan.textContent = new Date().getFullYear();
-    }
-    
-    // Adicionar classe ativa ao link de navegação atual
-    const currentPage = window.location.pathname;
-    navLinks.forEach(link => {
-        const linkPath = link.getAttribute('href');
+    // Inicialização quando o DOM estiver carregado
+    document.addEventListener('DOMContentLoaded', function() {
+        // Menu responsivo para mobile
+        initMobileMenu();
         
-        // Verificar se é a página atual
-        if (currentPage.endsWith(linkPath) || 
-            (currentPage.endsWith('/') && linkPath === 'index.html') ||
-            (currentPage.endsWith('como_funciona/') && linkPath === 'como_funciona/index.html') ||
-            (currentPage.endsWith('cursos/') && linkPath === 'cursos/index.html')) {
-            link.classList.add('active');
-        } else {
-            link.classList.remove('active');
-        }
-    });
-    
-    // Efeito de hover nas cards de features
-    const featureCards = document.querySelectorAll('.feature-card');
-    featureCards.forEach(card => {
-        card.addEventListener('mouseenter', function() {
-            this.style.transform = 'translateY(-5px)';
-        });
+        // Atualizar ano no rodapé
+        updateCurrentYear();
         
-        card.addEventListener('mouseleave', function() {
-            this.style.transform = 'translateY(0)';
-        });
+        // Animações de entrada
+        initScrollAnimations();
+        
+        // Efeitos de hover
+        initHoverEffects();
     });
     
-    // Scroll suave para links internos
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-            e.preventDefault();
+    function initMobileMenu() {
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navMenu = document.querySelector('.nav-menu');
+        
+        if (mobileMenu && navMenu) {
+            mobileMenu.addEventListener('click', function() {
+                mobileMenu.classList.toggle('active');
+                navMenu.classList.toggle('active');
+            });
             
-            const targetId = this.getAttribute('href');
-            if (targetId === '#') return;
-            
-            const targetElement = document.querySelector(targetId);
-            if (targetElement) {
-                window.scrollTo({
-                    top: targetElement.offsetTop - 80,
-                    behavior: 'smooth'
+            // Fechar menu ao clicar em um link
+            const navLinks = document.querySelectorAll('.nav-link');
+            navLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    mobileMenu.classList.remove('active');
+                    navMenu.classList.remove('active');
                 });
-            }
-        });
-    });
-    
-    // Adicionar efeito de parallax no hero
-    window.addEventListener('scroll', function() {
-        const scrolled = window.pageYOffset;
-        const hero = document.querySelector('.hero');
-        
-        if (hero) {
-            hero.style.transform = `translateY(${scrolled * 0.05}px)`;
+            });
         }
-    });
-});
+    }
+    
+    function updateCurrentYear() {
+        const currentYear = document.getElementById('current-year');
+        if (currentYear) {
+            currentYear.textContent = new Date().getFullYear();
+        }
+    }
+    
+    function initScrollAnimations() {
+        // Observar elementos para animação quando entram na tela
+        const animatedElements = document.querySelectorAll('.principle-card, .disclaimer-item');
+        
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        }, { threshold: 0.1 });
+        
+        animatedElements.forEach(element => {
+            observer.observe(element);
+        });
+    }
+    
+    function initHoverEffects() {
+        // Efeito de ripple nos botões
+        const buttons = document.querySelectorAll('.btn');
+        buttons.forEach(button => {
+            button.addEventListener('click', function(e) {
+                createRippleEffect(e, this);
+            });
+        });
+        
+        // Efeito de hover suave nos cards
+        const cards = document.querySelectorAll('.principle-card');
+        cards.forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transition = 'all 0.3s ease';
+            });
+        });
+    }
+    
+    function createRippleEffect(event, element) {
+        const x = event.clientX - element.getBoundingClientRect().left;
+        const y = event.clientY - element.getBoundingClientRect().top;
+        
+        const ripple = document.createElement('span');
+        ripple.classList.add('ripple');
+        ripple.style.left = x + 'px';
+        ripple.style.top = y + 'px';
+        
+        element.appendChild(ripple);
+        
+        setTimeout(() => {
+            ripple.remove();
+        }, 600);
+    }
+    
+    // Adicionar estilo CSS para efeito ripple
+    const style = document.createElement('style');
+    style.textContent = `
+        .ripple {
+            position: absolute;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.7);
+            transform: scale(0);
+            animation: ripple-animation 0.6s linear;
+            pointer-events: none;
+        }
+        
+        @keyframes ripple-animation {
+            to {
+                transform: scale(4);
+                opacity: 0;
+            }
+        }
+        
+        .btn {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .fade-in {
+            animation: fadeInUp 0.6s ease forwards;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    `;
+    document.head.appendChild(style);
+})();

@@ -3,170 +3,147 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Como Funciona - Edu.SamGrowthLabs</title>
+    <title>Como funciona - Educafinance</title>
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Cabeçalho -->
-    <header class="header">
+    <!-- Navegação -->
+    <nav class="navbar">
         <div class="container">
-            <nav class="navbar">
-                <a href="../index.html" class="logo">
-                    <span class="logo-text">Edu.<span class="logo-highlight">SamGrowthLabs</span></span>
+            <div class="nav-container">
+                <a href="../" class="logo">
+                    <span class="logo-text" data-i18n="logo_text">Educafinance</span>
+                    <span class="logo-subtext" data-i18n="logo_subtext">by SamGrowthLabs</span>
                 </a>
                 
-                <div class="nav-menu">
-                    <a href="../index.html" class="nav-link">Home</a>
-                    <a href="index.html" class="nav-link active">Como Funciona</a>
-                    <a href="../cursos/index.html" class="nav-link">Cursos</a>
+                <div class="menu-toggle" id="mobile-menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
                 </div>
                 
-                <button class="mobile-menu-btn" id="mobileMenuBtn">
-                    <i class="fas fa-bars"></i>
-                </button>
-            </nav>
-        </div>
-    </header>
-
-    <!-- Hero Section -->
-    <section class="hero-page">
-        <div class="container">
-            <div class="hero-page-content">
-                <h1 class="hero-page-title">Como Funciona a Plataforma</h1>
-                <p class="hero-page-subtitle">Entenda nossa metodologia, estrutura de ensino e como você pode transformar seu conhecimento financeiro.</p>
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="../" class="nav-link" data-i18n="nav_home">Início</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="" class="nav-link active" data-i18n="nav_how">Como funciona</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../solicitacao/" class="nav-link" data-i18n="nav_request">Solicitação</a>
+                    </li>
+                    <li class="nav-item">
+                        <button id="language-switch" class="nav-link language-btn">FR</button>
+                    </li>
+                </ul>
             </div>
         </div>
-    </section>
+    </nav>
 
     <!-- Conteúdo Principal -->
     <main class="main-content">
         <div class="container">
-            <!-- Seção 1: Metodologia -->
-            <section class="content-section">
-                <div class="section-header">
-                    <h2 class="section-title">Metodologia Educacional</h2>
-                    <p class="section-subtitle">Uma abordagem prática e eficiente para o aprendizado financeiro</p>
-                </div>
-                
-                <div class="how-it-works-grid">
-                    <div class="how-it-works-card">
-                        <div class="how-it-works-number">01</div>
-                        <h3>Fundamentação Teórica</h3>
-                        <p>Começamos estabelecendo uma base sólida de conceitos essenciais de finanças, investimentos e negócios, apresentados de forma clara e acessível.</p>
-                    </div>
-                    
-                    <div class="how-it-works-card">
-                        <div class="how-it-works-number">02</div>
-                        <h3>Aplicação Prática</h3>
-                        <p>Cada conceito teórico é acompanhado de exercícios, casos reais e simulações que permitem aplicar o conhecimento em situações do mercado.</p>
-                    </div>
-                    
-                    <div class="how-it-works-card">
-                        <div class="how-it-works-number">03</div>
-                        <h3>Análise de Casos Reais</h3>
-                        <p>Estudamos situações reais do mercado financeiro e empresarial, desenvolvendo capacidade analítica e crítica para tomada de decisões.</p>
-                    </div>
-                    
-                    <div class="how-it-works-card">
-                        <div class="how-it-works-number">04</div>
-                        <h3>Implementação Pessoal</h3>
-                        <p>Guiamos você na implementação dos conceitos aprendidos em sua própria vida financeira, com planos de ação personalizáveis.</p>
-                    </div>
-                </div>
+            <!-- Hero Section -->
+            <section class="hero-section">
+                <h1 class="page-title" data-i18n="how_title">Como funciona o Educafinance</h1>
+                <p class="page-subtitle" data-i18n="how_subtitle">Conheça nossa metodologia de educação financeira</p>
             </section>
-            
-            <!-- Seção 2: Estrutura do Curso -->
-            <section class="content-section">
-                <div class="section-header">
-                    <h2 class="section-title">Estrutura dos Cursos</h2>
-                    <p class="section-subtitle">Organização pensada para otimizar seu aprendizado</p>
+
+            <!-- Metodologia -->
+            <section class="methodology-section">
+                <div class="methodology-intro">
+                    <h2 data-i18n="methodology_title">Nossa Metodologia</h2>
+                    <p data-i18n="methodology_intro">Desenvolvemos uma abordagem prática e fundamentada para educação financeira, focada em autonomia e pensamento crítico.</p>
                 </div>
-                
-                <div class="course-structure">
-                    <div class="structure-item">
-                        <div class="structure-icon">
-                            <i class="fas fa-video"></i>
-                        </div>
-                        <div class="structure-content">
-                            <h3>Videoaulas Exclusivas</h3>
-                            <p>Conteúdo em vídeo de alta qualidade, gravado por especialistas, disponível 24/7 para acesso em qualquer dispositivo.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="structure-item">
-                        <div class="structure-icon">
-                            <i class="fas fa-file-pdf"></i>
-                        </div>
-                        <div class="structure-content">
-                            <h3>Material Complementar</h3>
-                            <p>Apresentações, planilhas, modelos e guias práticos para download e utilização imediata.</p>
+
+                <!-- Passos -->
+                <div class="steps-container">
+                    <div class="step-card">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h3 data-i18n="step1_title">Fundamentos Sólidos</h3>
+                            <p data-i18n="step1_desc">Começamos com os conceitos básicos da educação financeira: orçamento, controle de gastos, planejamento e emergência.</p>
                         </div>
                     </div>
-                    
-                    <div class="structure-item">
-                        <div class="structure-icon">
-                            <i class="fas fa-tasks"></i>
-                        </div>
-                        <div class="structure-content">
-                            <h3>Exercícios e Avaliações</h3>
-                            <p>Atividades práticas e testes de conhecimento para fixar o aprendizado e mensurar seu progresso.</p>
+
+                    <div class="step-card">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h3 data-i18n="step2_title">Análise Crítica</h3>
+                            <p data-i18n="step2_desc">Ensinamos como analisar oportunidades financeiras, identificar riscos e tomar decisões baseadas em dados, não em emoções.</p>
                         </div>
                     </div>
-                    
-                    <div class="structure-item">
-                        <div class="structure-icon">
-                            <i class="fas fa-certificate"></i>
+
+                    <div class="step-card">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h3 data-i18n="step3_title">Tomada de Decisão</h3>
+                            <p data-i18n="step3_desc">Desenvolvemos ferramentas para que você possa avaliar diferentes cenários e tomar suas próprias decisões com confiança.</p>
                         </div>
-                        <div class="structure-content">
-                            <h3>Certificação</h3>
-                            <p>Ao concluir o curso, você recebe um certificado de conclusão que comprova seu conhecimento adquirido.</p>
+                    </div>
+
+                    <div class="step-card">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h3 data-i18n="step4_title">Acompanhamento Contínuo</h3>
+                            <p data-i18n="step4_desc">A educação financeira é um processo. Oferecemos suporte para que você continue aprendendo e ajustando sua estratégia.</p>
                         </div>
                     </div>
                 </div>
             </section>
-            
-            <!-- Seção 3: Acesso e Suporte -->
-            <section class="content-section">
-                <div class="section-header">
-                    <h2 class="section-title">Acesso e Suporte</h2>
-                    <p class="section-subtitle">Como você acessa os cursos e obtém suporte durante sua jornada</p>
-                </div>
+
+            <!-- Diferenciais -->
+            <section class="differentiators-section">
+                <h2 data-i18n="differentials_title">O que nos diferencia</h2>
                 
-                <div class="access-support">
-                    <div class="access-card">
-                        <h3>Acesso Imediato</h3>
-                        <p>Após a inscrição, você recebe acesso imediato à plataforma e pode começar a estudar em minutos.</p>
-                        <ul>
-                            <li>Acesso 24 horas por dia, 7 dias por semana</li>
-                            <li>Compatível com computadores, tablets e smartphones</li>
-                            <li>Conteúdo disponível por tempo ilimitado após a compra</li>
-                        </ul>
+                <div class="differentiators-grid">
+                    <div class="differentiator-card">
+                        <div class="differentiator-icon">
+                            <i class="fas fa-user-graduate"></i>
+                        </div>
+                        <h3 data-i18n="diff1_title">Foco no Aluno</h3>
+                        <p data-i18n="diff1_desc">Nosso objetivo é que você desenvolva independência financeira, não dependência de nossas opiniões.</p>
                     </div>
-                    
-                    <div class="access-card">
-                        <h3>Suporte Especializado</h3>
-                        <p>Nossa equipe está disponível para esclarecer dúvidas sobre conteúdo, plataforma e aplicação prática.</p>
-                        <ul>
-                            <li>Suporte por email com resposta em até 24h úteis</li>
-                            <li>FAQ completo com respostas para as dúvidas mais comuns</li>
-                            <li>Atualizações regulares de conteúdo conforme mudanças no mercado</li>
-                        </ul>
+
+                    <div class="differentiator-card">
+                        <div class="differentiator-icon">
+                            <i class="fas fa-balance-scale"></i>
+                        </div>
+                        <h3 data-i18n="diff2_title">Transparência Total</h3>
+                        <p data-i18n="diff2_desc">Não escondemos informações nem usamos linguagem técnica para confundir. Tudo é claro e acessível.</p>
+                    </div>
+
+                    <div class="differentiator-card">
+                        <div class="differentiator-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3 data-i18n="diff3_title">Sem Conflitos de Interesse</h3>
+                        <p data-i18n="diff3_desc">Não vendemos produtos financeiros, não recebemos comissões e não temos parcerias com corretoras.</p>
                     </div>
                 </div>
             </section>
-            
-            <!-- CTA Section -->
-            <section class="content-section cta-section">
-                <div class="cta-content">
-                    <h2 class="cta-title">Pronto para Começar?</h2>
-                    <p class="cta-text">Explore nossos cursos e inicie sua jornada de transformação financeira hoje mesmo.</p>
-                    <a href="../cursos/index.html" class="btn btn-primary btn-large">Ver Cursos Disponíveis</a>
+
+            <!-- Aviso Importante -->
+            <section class="warning-section">
+                <div class="warning-content">
+                    <div class="warning-icon">
+                        <i class="fas fa-exclamation-triangle"></i>
+                    </div>
+                    <div class="warning-text">
+                        <h3 data-i18n="warning_title">Importante entender</h3>
+                        <p data-i18n="warning_text">O Educafinance é uma plataforma de EDUCAÇÃO. Não fornecemos recomendações específicas, não indicamos ativos e não garantimos resultados financeiros. Nosso compromisso é com seu aprendizado, não com seus ganhos.</p>
+                    </div>
                 </div>
+            </section>
+
+            <!-- Call to Action -->
+            <section class="cta-section">
+                <h2 data-i18n="cta_title">Pronto para aprender?</h2>
+                <p data-i18n="cta_subtitle">Comece sua jornada de educação financeira com autonomia e responsabilidade.</p>
+                <a href="../solicitacao/" class="btn btn-primary" data-i18n="cta_button">Fazer solicitação</a>
             </section>
         </div>
     </main>
@@ -175,36 +152,35 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <div class="footer-logo">
-                    <a href="../index.html" class="logo">
-                        <span class="logo-text">Edu.<span class="logo-highlight">SamGrowthLabs</span></span>
-                    </a>
-                    <p class="footer-description">Educação financeira, de investimentos e negócios para resultados reais.</p>
+                <div class="footer-info">
+                    <h3 data-i18n="footer_title">Educafinance</h3>
+                    <p data-i18n="footer_description">Plataforma de educação financeira da SamGrowthLabs.</p>
                 </div>
                 
                 <div class="footer-links">
-                    <div class="footer-links-group">
-                        <h4 class="footer-links-title">Navegação</h4>
-                        <a href="../index.html" class="footer-link">Home</a>
-                        <a href="index.html" class="footer-link">Como Funciona</a>
-                        <a href="../cursos/index.html" class="footer-link">Cursos</a>
-                    </div>
-                    
-                    <div class="footer-links-group">
-                        <h4 class="footer-links-title">Legal</h4>
-                        <a href="../pages/educa_finance/privacidade/index.html" class="footer-link">Política de Privacidade</a>
-                        <a href="../pages/educa_finance/privacidade/index.html" class="footer-link">Termos de Uso</a>
-                    </div>
+                    <h4 data-i18n="footer_links">Links</h4>
+                    <ul>
+                        <li><a href="../" data-i18n="nav_home">Início</a></li>
+                        <li><a href="" data-i18n="nav_how">Como funciona</a></li>
+                        <li><a href="../solicitacao/" data-i18n="nav_request">Solicitação</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-legal">
+                    <h4 data-i18n="footer_legal">Legal</h4>
+                    <ul>
+                        <li><a href="https://privacidade.samgrowthlabs.com.br/privacidade" target="_blank" data-i18n="footer_privacy">Política de Privacidade</a></li>
+                    </ul>
                 </div>
             </div>
             
             <div class="footer-bottom">
-                <p class="copyright">&copy; <span id="currentYear"></span> Edu.SamGrowthLabs. Todos os direitos reservados.</p>
+                <p>&copy; <span id="current-year"></span> Educafinance. <span data-i18n="footer_copyright">Todos os direitos reservados.</span></p>
             </div>
         </div>
     </footer>
 
-    <script src="../script.js"></script>
+    <script src="../lang.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

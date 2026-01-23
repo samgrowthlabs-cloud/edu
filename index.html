@@ -3,139 +3,169 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edu.SamGrowthLabs - Educação Financeira de Alto Nível</title>
+    <title>Educafinance - Educação Financeira SamGrowthLabs</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Cabeçalho -->
-    <header class="header">
+    <!-- Navegação -->
+    <nav class="navbar">
         <div class="container">
-            <nav class="navbar">
-                <a href="index.html" class="logo">
-                    <span class="logo-text">Edu.<span class="logo-highlight">SamGrowthLabs</span></span>
+            <div class="nav-container">
+                <a href="" class="logo">
+                    <span class="logo-text" data-i18n="logo_text">Educafinance</span>
+                    <span class="logo-subtext" data-i18n="logo_subtext">by SamGrowthLabs</span>
                 </a>
                 
-                <div class="nav-menu">
-                    <a href="index.html" class="nav-link active">Home</a>
-                    <a href="como_funciona/index.html" class="nav-link">Como Funciona</a>
-                    <a href="cursos/index.html" class="nav-link">Cursos</a>
+                <div class="menu-toggle" id="mobile-menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
                 </div>
                 
-                <button class="mobile-menu-btn" id="mobileMenuBtn">
-                    <i class="fas fa-bars"></i>
-                </button>
-            </nav>
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="" class="nav-link active" data-i18n="nav_home">Início</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="como_funciona/" class="nav-link" data-i18n="nav_how">Como funciona</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="solicitacao/" class="nav-link" data-i18n="nav_request">Solicitação</a>
+                    </li>
+                    <li class="nav-item">
+                        <button id="language-switch" class="nav-link language-btn">FR</button>
+                    </li>
+                </ul>
+            </div>
         </div>
-    </header>
+    </nav>
 
-    <!-- Hero Section -->
-    <section class="hero">
+    <!-- Conteúdo Principal -->
+    <main class="main-content">
         <div class="container">
-            <div class="hero-content">
-                <h1 class="hero-title">Educação Financeira para <span class="text-gradient">Resultados Reais</span></h1>
-                <p class="hero-subtitle">Aprenda com especialistas do mercado a dominar finanças, investimentos e negócios através de metodologias comprovadas e conteúdo de alto nível.</p>
-                <div class="hero-actions">
-                    <a href="cursos/index.html" class="btn btn-primary">Explorar Cursos</a>
-                    <a href="como_funciona/index.html" class="btn btn-outline">Como Funciona</a>
+            <!-- Hero Section -->
+            <section class="hero-section">
+                <div class="hero-content">
+                    <h1 class="hero-title" data-i18n="hero_title">Educafinance</h1>
+                    <p class="hero-subtitle" data-i18n="hero_subtitle">Educação financeira para autonomia e responsabilidade</p>
+                    
+                    <div class="hero-message">
+                        <p class="highlight" data-i18n="hero_highlight">Ensinamos como não ser burro com dinheiro.</p>
+                        <p data-i18n="hero_description">Uma plataforma de educação financeira que te ensina a pensar criticamente sobre suas finanças, sem promessas milagrosas ou recomendações de investimento.</p>
+                    </div>
                 </div>
-            </div>
-        </div>
-    </section>
+            </section>
 
-    <!-- Sobre a Plataforma -->
-    <section class="section about">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">O que é a Edu.SamGrowthLabs?</h2>
-                <p class="section-subtitle">Uma plataforma de educação focada em resultados práticos e crescimento de longo prazo</p>
-            </div>
-            
-            <div class="about-content">
-                <div class="about-text">
-                    <p>A <strong>Edu.SamGrowthLabs</strong> é uma instituição de educação especializada em finanças, investimentos e negócios, desenvolvida para quem busca transformação real em sua vida financeira e profissional.</p>
-                    
-                    <p>Nossa metodologia combina fundamentos sólidos com aplicações práticas do mercado, proporcionando uma jornada educacional completa que vai da teoria à execução.</p>
-                    
-                    <p>Iniciamos nossa atuação com o <strong>EducaFinance</strong>, um curso completo de educação financeira, com a estrutura preparada para expandir para novas áreas do conhecimento financeiro e empresarial.</p>
-                    
-                    <div class="features-grid">
-                        <div class="feature-card">
-                            <div class="feature-icon">
-                                <i class="fas fa-chart-line"></i>
-                            </div>
-                            <h3>Foco em Resultados</h3>
-                            <p>Metodologias projetadas para aplicar conhecimentos e gerar resultados tangíveis.</p>
+            <!-- Princípios -->
+            <section class="principles-section">
+                <h2 class="section-title" data-i18n="principles_title">O que defendemos</h2>
+                
+                <div class="principles-grid">
+                    <div class="principle-card">
+                        <div class="principle-icon">
+                            <i class="fas fa-brain"></i>
                         </div>
-                        
-                        <div class="feature-card">
-                            <div class="feature-icon">
-                                <i class="fas fa-graduation-cap"></i>
-                            </div>
-                            <h3>Educação de Alto Nível</h3>
-                            <p>Conteúdo desenvolvido por especialistas com experiência comprovada no mercado.</p>
+                        <h3 data-i18n="principle1_title">Autonomia Financeira</h3>
+                        <p data-i18n="principle1_desc">Ensinamos você a tomar suas próprias decisões financeiras com confiança e conhecimento.</p>
+                    </div>
+                    
+                    <div class="principle-card">
+                        <div class="principle-icon">
+                            <i class="fas fa-book"></i>
                         </div>
-                        
-                        <div class="feature-card">
-                            <div class="feature-icon">
-                                <i class="fas fa-infinity"></i>
-                            </div>
-                            <h3>Aprendizado Contínuo</h3>
-                            <p>Plataforma em constante evolução com novos módulos e atualizações de conteúdo.</p>
+                        <h3 data-i18n="principle2_title">Conhecimento Real</h3>
+                        <p data-i18n="principle2_desc">Fundamentos sólidos da educação financeira, sem promessas vazias ou atalhos perigosos.</p>
+                    </div>
+                    
+                    <div class="principle-card">
+                        <div class="principle-icon">
+                            <i class="fas fa-user-shield"></i>
+                        </div>
+                        <h3 data-i18n="principle3_title">Responsabilidade</h3>
+                        <p data-i18n="principle3_desc">Cada decisão financeira é sua. Nosso papel é fornecer as ferramentas para que você decida com sabedoria.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- O que NÃO fazemos -->
+            <section class="disclaimer-section">
+                <h2 class="section-title" data-i18n="disclaimer_title">Importante: O que NÃO fazemos</h2>
+                
+                <div class="disclaimer-content">
+                    <div class="disclaimer-item">
+                        <div class="disclaimer-icon">
+                            <i class="fas fa-ban"></i>
+                        </div>
+                        <div class="disclaimer-text">
+                            <h3 data-i18n="disclaimer1_title">Não damos recomendações</h3>
+                            <p data-i18n="disclaimer1_desc">Não indicamos ativos, ações, criptomoedas ou qualquer tipo de investimento específico.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="disclaimer-item">
+                        <div class="disclaimer-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="disclaimer-text">
+                            <h3 data-i18n="disclaimer2_title">Não prometemos ganhos</h3>
+                            <p data-i18n="disclaimer2_desc">Não garantimos rentabilidade, lucros ou resultados financeiros específicos.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="disclaimer-item">
+                        <div class="disclaimer-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div class="disclaimer-text">
+                            <h3 data-i18n="disclaimer3_title">Somos educadores</h3>
+                            <p data-i18n="disclaimer3_desc">Nosso trabalho é ensinar conceitos para que você desenvolva seu próprio pensamento crítico sobre dinheiro.</p>
                         </div>
                     </div>
                 </div>
-            </div>
+                
+                <div class="cta-section">
+                    <a href="como_funciona/" class="btn btn-primary" data-i18n="cta_how">Entenda como funciona</a>
+                    <a href="solicitacao/" class="btn btn-secondary" data-i18n="cta_request">Fazer solicitação</a>
+                </div>
+            </section>
         </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="section cta">
-        <div class="container">
-            <div class="cta-content">
-                <h2 class="cta-title">Comece Sua Jornada de Transformação Financeira</h2>
-                <p class="cta-text">Acesse nosso catálogo de cursos e descubra como a educação financeira de qualidade pode transformar sua relação com o dinheiro.</p>
-                <a href="cursos/index.html" class="btn btn-primary btn-large">Ver Cursos Disponíveis</a>
-            </div>
-        </div>
-    </section>
+    </main>
 
     <!-- Rodapé -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <div class="footer-logo">
-                    <a href="index.html" class="logo">
-                        <span class="logo-text">Edu.<span class="logo-highlight">SamGrowthLabs</span></span>
-                    </a>
-                    <p class="footer-description">Educação financeira, de investimentos e negócios para resultados reais.</p>
+                <div class="footer-info">
+                    <h3 data-i18n="footer_title">Educafinance</h3>
+                    <p data-i18n="footer_description">Plataforma de educação financeira da SamGrowthLabs.</p>
                 </div>
                 
                 <div class="footer-links">
-                    <div class="footer-links-group">
-                        <h4 class="footer-links-title">Navegação</h4>
-                        <a href="index.html" class="footer-link">Home</a>
-                        <a href="como_funciona/index.html" class="footer-link">Como Funciona</a>
-                        <a href="cursos/index.html" class="footer-link">Cursos</a>
-                    </div>
-                    
-                    <div class="footer-links-group">
-                        <h4 class="footer-links-title">Legal</h4>
-                        <a href="pages/educa_finance/privacidade/index.html" class="footer-link">Política de Privacidade</a>
-                        <a href="pages/educa_finance/privacidade/index.html" class="footer-link">Termos de Uso</a>
-                    </div>
+                    <h4 data-i18n="footer_links">Links</h4>
+                    <ul>
+                        <li><a href="" data-i18n="nav_home">Início</a></li>
+                        <li><a href="como_funciona/" data-i18n="nav_how">Como funciona</a></li>
+                        <li><a href="solicitacao/" data-i18n="nav_request">Solicitação</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-legal">
+                    <h4 data-i18n="footer_legal">Legal</h4>
+                    <ul>
+                        <li><a href="https://privacidade.samgrowthlabs.com.br/privacidade" target="_blank" data-i18n="footer_privacy">Política de Privacidade</a></li>
+                    </ul>
                 </div>
             </div>
             
             <div class="footer-bottom">
-                <p class="copyright">&copy; <span id="currentYear"></span> Edu.SamGrowthLabs. Todos os direitos reservados.</p>
+                <p>&copy; <span id="current-year"></span> Educafinance. <span data-i18n="footer_copyright">Todos os direitos reservados.</span></p>
             </div>
         </div>
     </footer>
 
     <script src="script.js"></script>
+    <script src="lang.js"></script>
 </body>
 </html>

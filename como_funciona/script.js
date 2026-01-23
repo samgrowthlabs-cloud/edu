@@ -1,59 +1,58 @@
-// Script específico para a página "Como Funciona"
-
-document.addEventListener('DOMContentLoaded', function() {
-    // Efeito de contagem nos números das cards
-    const howItWorksCards = document.querySelectorAll('.how-it-works-card');
+// Script específico para a página Como Funciona
+(function() {
+    'use strict';
     
-    howItWorksCards.forEach(card => {
-        card.addEventListener('mouseenter', function() {
-            const number = this.querySelector('.how-it-works-number');
-            if (number) {
-                number.style.color = 'rgba(255, 255, 255, 0.1)';
-                number.style.transform = 'scale(1.1)';
-                number.style.transition = 'all 0.3s ease';
-            }
-        });
+    document.addEventListener('DOMContentLoaded', function() {
+        // Inicializar menu mobile
+        initMobileMenu();
         
-        card.addEventListener('mouseleave', function() {
-            const number = this.querySelector('.how-it-works-number');
-            if (number) {
-                number.style.color = 'rgba(255, 255, 255, 0.05)';
-                number.style.transform = 'scale(1)';
-            }
-        });
+        // Atualizar ano no rodapé
+        updateCurrentYear();
+        
+        // Animar elementos ao scroll
+        initScrollAnimations();
     });
     
-    // Animação de entrada para os itens da estrutura do curso
-    const structureItems = document.querySelectorAll('.structure-item');
-    
-    function animateOnScroll() {
-        structureItems.forEach(item => {
-            const itemPosition = item.getBoundingClientRect().top;
-            const screenPosition = window.innerHeight / 1.2;
+    function initMobileMenu() {
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navMenu = document.querySelector('.nav-menu');
+        
+        if (mobileMenu && navMenu) {
+            mobileMenu.addEventListener('click', function() {
+                mobileMenu.classList.toggle('active');
+                navMenu.classList.toggle('active');
+            });
             
-            if (itemPosition < screenPosition) {
-                item.style.opacity = '1';
-                item.style.transform = 'translateY(0)';
-            }
+            const navLinks = document.querySelectorAll('.nav-link');
+            navLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    mobileMenu.classList.remove('active');
+                    navMenu.classList.remove('active');
+                });
+            });
+        }
+    }
+    
+    function updateCurrentYear() {
+        const currentYear = document.getElementById('current-year');
+        if (currentYear) {
+            currentYear.textContent = new Date().getFullYear();
+        }
+    }
+    
+    function initScrollAnimations() {
+        const elements = document.querySelectorAll('.step-card, .differentiator-card');
+        
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-in');
+                }
+            });
+        }, { threshold: 0.1 });
+        
+        elements.forEach(element => {
+            observer.observe(element);
         });
     }
-    
-    // Configurar estado inicial
-    structureItems.forEach(item => {
-        item.style.opacity = '0';
-        item.style.transform = 'translateY(20px)';
-        item.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-    });
-    
-    // Verificar na carga inicial
-    animateOnScroll();
-    
-    // Verificar durante o scroll
-    window.addEventListener('scroll', animateOnScroll);
-    
-    // Adicionar ano atual no rodapé
-    const currentYearSpan = document.getElementById('currentYear');
-    if (currentYearSpan) {
-        currentYearSpan.textContent = new Date().getFullYear();
-    }
-});
+})();

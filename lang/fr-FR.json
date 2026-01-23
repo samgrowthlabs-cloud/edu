@@ -1,0 +1,87 @@
+{
+  "logo_text": "Educafinance",
+  "logo_subtext": "by SamGrowthLabs",
+  
+  "nav_home": "Accueil",
+  "nav_how": "Comment ça marche",
+  "nav_request": "Demande",
+  
+  "hero_title": "Educafinance",
+  "hero_subtitle": "Éducation financière pour l'autonomie et la responsabilité",
+  "hero_highlight": "Nous enseignons comment ne pas être stupide avec l'argent.",
+  "hero_description": "Une plateforme d'éducation financière qui vous apprend à penser de manière critique à vos finances, sans promesses miraculeuses ou recommandations d'investissement.",
+  
+  "principles_title": "Ce que nous défendons",
+  "principle1_title": "Autonomie Financière",
+  "principle1_desc": "Nous vous apprenons à prendre vos propres décisions financières avec confiance et connaissance.",
+  "principle2_title": "Connaissances Réelles",
+  "principle2_desc": "Fondements solides de l'éducation financière, sans promesses vides ou raccourcis dangereux.",
+  "principle3_title": "Responsabilité",
+  "principle3_desc": "Chaque décision financière est la vôtre. Notre rôle est de fournir les outils pour que vous décidiez avec sagesse.",
+  
+  "disclaimer_title": "Important : Ce que nous NE faisons PAS",
+  "disclaimer1_title": "Nous ne donnons pas de recommandations",
+  "disclaimer1_desc": "Nous n'indiquons pas d'actifs, d'actions, de cryptomonnaies ou tout type d'investissement spécifique.",
+  "disclaimer2_title": "Nous ne promettons pas de gains",
+  "disclaimer2_desc": "Nous ne garantissons pas la rentabilité, les profits ou des résultats financiers spécifiques.",
+  "disclaimer3_title": "Nous sommes des éducateurs",
+  "disclaimer3_desc": "Notre travail est d'enseigner des concepts pour que vous développiez votre propre pensée critique sur l'argent.",
+  
+  "cta_how": "Comprendre comment ça marche",
+  "cta_request": "Faire une demande",
+  
+  "how_title": "Comment fonctionne Educafinance",
+  "how_subtitle": "Découvrez notre méthodologie d'éducation financière",
+  "methodology_title": "Notre Méthodologie",
+  "methodology_intro": "Nous développons une approche pratique et fondée pour l'éducation financière, axée sur l'autonomie et la pensée critique.",
+  
+  "step1_title": "Fondements Solides",
+  "step1_desc": "Nous commençons par les concepts de base de l'éducation financière : budget, contrôle des dépenses, planification et épargne d'urgence.",
+  "step2_title": "Analyse Critique",
+  "step2_desc": "Nous enseignons comment analyser les opportunités financières, identifier les risques et prendre des décisions basées sur des données, pas sur des émotions.",
+  "step3_title": "Prise de Décision",
+  "step3_desc": "Nous développons des outils pour que vous puissiez évaluer différents scénarios et prendre vos propres décisions en toute confiance.",
+  "step4_title": "Suivi Continu",
+  "step4_desc": "L'éducation financière est un processus. Nous offrons un soutien pour que vous continuiez à apprendre et à ajuster votre stratégie.",
+  
+  "differentials_title": "Ce qui nous différencie",
+  "diff1_title": "Focus sur l'Élève",
+  "diff1_desc": "Notre objectif est que vous développiez une indépendance financière, pas une dépendance à nos opinions.",
+  "diff2_title": "Transparence Totale",
+  "diff2_desc": "Nous ne cachons pas d'informations et n'utilisons pas de langage technique pour tromper. Tout est clair et accessible.",
+  "diff3_title": "Sans Conflits d'Intérêts",
+  "diff3_desc": "Nous ne vendons pas de produits financiers, ne recevons pas de commissions et n'avons pas de partenariats avec des courtiers.",
+  
+  "warning_title": "Important à comprendre",
+  "warning_text": "Educafinance est une plateforme d'ÉDUCATION. Nous ne fournissons pas de recommandations spécifiques, n'indiquons pas d'actifs et ne garantissons pas de résultats financiers. Notre engagement est envers votre apprentissage, pas vos gains.",
+  
+  "cta_title": "Prêt à apprendre ?",
+  "cta_subtitle": "Commencez votre parcours d'éducation financière avec autonomie et responsabilité.",
+  "cta_button": "Faire une demande",
+  
+  "request_title": "Demande d'Accès",
+  "request_subtitle": "Remplissez les données ci-dessous pour demander l'accès à la plateforme Educafinance",
+  
+  "form_name": "Nom complet",
+  "form_name_placeholder": "Entrez votre nom complet",
+  "form_cpf": "CPF",
+  "form_cpf_placeholder": "000.000.000-00",
+  "form_phone": "Téléphone",
+  "form_phone_placeholder": "(11) 99999-9999",
+  "form_privacy": "J'ai lu et j'accepte la",
+  "form_submit": "Envoyer la demande",
+  "form_info": "Après envoi, vous serez redirigé vers WhatsApp pour finaliser le processus.",
+  
+  "disclaimer_title": "Informations importantes",
+  "disclaimer1": "Nous ne collectons pas de données au-delà de celles nécessaires pour le contact",
+  "disclaimer2": "Nous ne partageons pas vos données avec des tiers",
+  "disclaimer3": "L'accès à la plateforme est soumis à analyse et disponibilité",
+  "disclaimer4": "Ceci est un service éducatif, pas d'investissement",
+  
+  "footer_title": "Educafinance",
+  "footer_description": "Plateforme d'éducation financière de SamGrowthLabs.",
+  "footer_links": "Liens",
+  "footer_legal": "Légal",
+  "footer_privacy": "Politique de Confidentialité",
+  "footer_copyright": "Tous droits réservés."
+}
