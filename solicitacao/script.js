@@ -44,27 +44,7 @@
     }
     
     function initMasks() {
-        // Máscara para CPF
-        const cpfInput = document.getElementById('cpf');
-        if (cpfInput) {
-            cpfInput.addEventListener('input', function(e) {
-                let value = e.target.value.replace(/\D/g, '');
-                
-                if (value.length > 11) {
-                    value = value.substring(0, 11);
-                }
-                
-                if (value.length > 9) {
-                    value = value.replace(/(\d{3})(\d{3})(\d{3})(\d{1,2})/, '$1.$2.$3-$4');
-                } else if (value.length > 6) {
-                    value = value.replace(/(\d{3})(\d{3})(\d{1,3})/, '$1.$2.$3');
-                } else if (value.length > 3) {
-                    value = value.replace(/(\d{3})(\d{1,3})/, '$1.$2');
-                }
-                
-                e.target.value = value;
-            });
-        }
+        // Removida a máscara de CPF
         
         // Máscara para telefone
         const phoneInput = document.getElementById('phone');
@@ -125,9 +105,9 @@
         const nameInput = document.getElementById('full-name');
         if (!validateField(nameInput)) isValid = false;
         
-        // Validar CPF
-        const cpfInput = document.getElementById('cpf');
-        if (!validateField(cpfInput)) isValid = false;
+        // Validar email
+        const emailInput = document.getElementById('email');
+        if (!validateField(emailInput)) isValid = false;
         
         // Validar telefone
         const phoneInput = document.getElementById('phone');
@@ -161,10 +141,12 @@
                 }
                 break;
                 
-            case 'cpf':
-                const cpfNumbers = value.replace(/\D/g, '');
-                if (cpfNumbers.length !== 11) {
-                    errorMessage = 'CPF deve ter 11 dígitos';
+            case 'email':
+                if (!value) {
+                    errorMessage = 'E-mail é obrigatório';
+                    isValid = false;
+                } else if (!isValidEmail(value)) {
+                    errorMessage = 'Por favor, insira um e-mail válido';
                     isValid = false;
                 }
                 break;
@@ -185,6 +167,12 @@
         }
         
         return isValid;
+    }
+    
+    function isValidEmail(email) {
+        // Expressão regular para validação de email
+        const emailRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
+        return emailRegex.test(email);
     }
     
     function showError(field, message) {
@@ -215,13 +203,13 @@
     function sendToWhatsApp() {
         // Coletar dados do formulário
         const name = document.getElementById('full-name').value;
-        const cpf = document.getElementById('cpf').value;
+        const email = document.getElementById('email').value;
         const phone = document.getElementById('phone').value;
         
         // Formatar mensagem para WhatsApp
         const message = `*Nova Solicitação - Educafinance*\n\n` +
                        `*Nome:* ${name}\n` +
-                       `*CPF:* ${cpf}\n` +
+                       `*E-mail:* ${email}\n` +
                        `*Telefone:* ${phone}\n\n` +
                        `Solicitação enviada através do site edu.samgrowthlabs.com`;
         
